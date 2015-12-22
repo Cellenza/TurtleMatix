@@ -23,6 +23,9 @@ namespace TurtleMatix.Turtle.Application.Generic
                 case TurtleOperator.GoBackward:
                     return new GoBackwardMouvement(_engineFactory);
 
+                case TurtleOperator.Wait:
+                    return new WaitMouvement();
+
                 default:
                     throw new ArgumentOutOfRangeException(nameof(turtleOperator), turtleOperator, null);
             }

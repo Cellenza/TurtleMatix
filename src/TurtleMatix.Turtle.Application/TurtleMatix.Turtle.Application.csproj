@@ -48,6 +48,7 @@
     <Compile Include="Generic\_IEngine.cs" />
     <Compile Include="Generic\_IEngineFactory.cs" />
     <Compile Include="Generic\MouvementFacotry.cs" />
+    <Compile Include="Mouvements\WaitMouvement.cs" />
     <Compile Include="Mouvements\AdvanceMouvement.cs" />
     <Compile Include="Generic\AbstractDirectMouvement.cs" />
     <Compile Include="Mouvements\GoBackwardMouvement.cs" />

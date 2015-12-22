@@ -27,6 +27,7 @@ namespace TurtleMatix.Core
         {
             return Operator + "|" + Operand;
         }
+
         public override bool Equals(object obj)
         {
             var castedInput = obj as TurtleCommand;
@@ -34,7 +35,7 @@ namespace TurtleMatix.Core
             if (castedInput == null)
                 throw new ArgumentException("Not valid type, please use an instance of Type 'TurtleCommand'");
 
-            return Operand == castedInput.Operand && Operator == castedInput.Operator;
+            return castedInput.ToString() == ToString();
         }
 
     }

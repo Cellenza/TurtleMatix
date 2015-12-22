@@ -70,6 +70,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mouvements\WhenUsingWaitMouvement\AndTryToExecute.cs" />
+    <Compile Include="Mouvements\WhenUsingWaitMouvement\WhenUsingWaitMouvement.cs" />
     <Compile Include="Mouvements\WhenUsingMouvementFactory\AndCheckIfEachOperatorCorrespondsToAMouvement.cs" />
     <Compile Include="Mouvements\WhenUsingMouvementFactory\AndTryToGetAdvanceMouvement.cs" />
     <Compile Include="Mouvements\WhenUsingMouvementFactory\AndTryToGetGoBackwardMouvement.cs" />

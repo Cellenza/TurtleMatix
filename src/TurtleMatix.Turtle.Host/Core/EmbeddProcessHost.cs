@@ -24,8 +24,11 @@ namespace TurtleMatix.Turtle.Host.Core
 
         private void ReceptionListener_OnCommandReceivedEvent(object sender, CommandReceivedEventArgs e)
         {
-            var mouvement = _mouvementFactory.GetMouvement(e.Command.Operator);
-            mouvement.Execute(e.Command.Operand);
+            foreach (var command in e.Algorithm.Commands)
+            {
+                var mouvement = _mouvementFactory.GetMouvement(command.Operator);
+                mouvement.Execute(command.Operand);
+            }
         }
 
     }

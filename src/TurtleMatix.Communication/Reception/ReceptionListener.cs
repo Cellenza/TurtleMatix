@@ -35,7 +35,7 @@ namespace TurtleMatix.Communication.Reception
         {
             Debug.WriteLine("Received Message : " + inputMessage);
             dynamic input = JsonConvert.DeserializeObject(inputMessage);
-            OnCommandReceivedEvent(this, new CommandReceivedEventArgs(TurtleCommand.FromString(input[0].ToString())));
+            OnCommandReceivedEvent(this, new CommandReceivedEventArgs(TurtleAlgorithm.FromString(input[0].ToString())));
         }
 
         private void DisplaySubscribeConnectStatusMessage(string publishResult)

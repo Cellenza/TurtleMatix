@@ -3,6 +3,7 @@ namespace TurtleMatix.Core
     public enum TurtleOperator
     {
         Advance,
-        GoBackward
+        GoBackward,
+        Wait
     }
 }
