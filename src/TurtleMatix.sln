@@ -166,38 +166,4 @@ Global
 		{C0C04258-0808-4C87-8DCE-B1661C7E5021} = {0AC97289-FBF2-4633-8A11-81C692D3C4D2}
 		{7DDE090D-981C-42C8-8085-B9389BAC2308} = {0AC97289-FBF2-4633-8A11-81C692D3C4D2}
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 8
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://kheops321.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = TurtleMatix.Turtle.Application\\TurtleMatix.Turtle.Application.csproj
-		SccProjectTopLevelParentUniqueName1 = TurtleMatix.sln
-		SccProjectName1 = TurtleMatix.Turtle.Application
-		SccLocalPath1 = TurtleMatix.Turtle.Application
-		SccProjectUniqueName2 = TurtleMatix.Turtle.Application.Test\\TurtleMatix.Turtle.Application.Test.csproj
-		SccProjectTopLevelParentUniqueName2 = TurtleMatix.sln
-		SccProjectName2 = TurtleMatix.Turtle.Application.Test
-		SccLocalPath2 = TurtleMatix.Turtle.Application.Test
-		SccProjectUniqueName3 = TurtleMatix.Turtle.Host\\TurtleMatix.Turtle.Host.csproj
-		SccProjectTopLevelParentUniqueName3 = TurtleMatix.sln
-		SccProjectName3 = TurtleMatix.Turtle.Host
-		SccLocalPath3 = TurtleMatix.Turtle.Host
-		SccProjectUniqueName4 = TurtleMatix.Communication\\TurtleMatix.Communication.csproj
-		SccProjectTopLevelParentUniqueName4 = TurtleMatix.sln
-		SccProjectName4 = TurtleMatix.Communication
-		SccLocalPath4 = TurtleMatix.Communication
-		SccProjectUniqueName5 = TurtleMatix.TestConsole\\TurtleMatix.TestConsole.csproj
-		SccProjectTopLevelParentUniqueName5 = TurtleMatix.sln
-		SccProjectName5 = TurtleMatix.TestConsole
-		SccLocalPath5 = TurtleMatix.TestConsole
-		SccProjectUniqueName6 = TurtleMatix.Core\\TurtleMatix.Core.csproj
-		SccProjectTopLevelParentUniqueName6 = TurtleMatix.sln
-		SccProjectName6 = TurtleMatix.Core
-		SccLocalPath6 = TurtleMatix.Core
-		SccProjectUniqueName7 = TurtleMatix.Core.Test\\TurtleMatix.Core.Test.csproj
-		SccProjectTopLevelParentUniqueName7 = TurtleMatix.sln
-		SccProjectName7 = TurtleMatix.Core.Test
-		SccLocalPath7 = TurtleMatix.Core.Test
-	EndGlobalSection
 EndGlobal
