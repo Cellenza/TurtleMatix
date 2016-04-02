@@ -1,4 +1,4 @@
-﻿namespace TurtleMatix.Communication.Core
+﻿namespace TurtleMatix.Communication
 {
     public class PubNubParams
     {

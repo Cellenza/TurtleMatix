@@ -14,12 +14,15 @@ namespace TurtleMatix.Turtle.Application.Generic
 
         public EngineFactory()
         {
-            var types = _turtleHostAssembly
-                .DefinedTypes.Where(x =>
-                    x.IsClass && !x.IsAbstract &&
-                    x.ImplementedInterfaces.Any(y => y == typeof(_IEngine)));
+            if (_turtleHostAssembly != null)
+            {
+                var types = _turtleHostAssembly
+                    .DefinedTypes.Where(x =>
+                        x.IsClass && !x.IsAbstract &&
+                        x.ImplementedInterfaces.Any(y => y == typeof (_IEngine)));
 
-            _engines = types.Select(x => (_IEngine) Activator.CreateInstance(x.AsType())).ToList();
+                _engines = types.Select(x => (_IEngine) Activator.CreateInstance(x.AsType())).ToList();
+            }
         }
 
         public _IEngine GetFrontEngine()

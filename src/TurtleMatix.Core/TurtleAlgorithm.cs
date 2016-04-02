@@ -24,15 +24,5 @@ namespace TurtleMatix.Core
         {
             return string.Join(";", Commands);
         }
-
-        public override bool Equals(object obj)
-        {
-            var castedInput = obj as TurtleAlgorithm;
-
-            if (castedInput == null)
-                throw new ArgumentException("Not valid type, please use an instance of Type 'TurtleCommand'");
-
-            return castedInput.ToString() == ToString();
-        }
     }
 }

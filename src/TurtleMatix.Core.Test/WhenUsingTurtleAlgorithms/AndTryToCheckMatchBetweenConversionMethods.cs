@@ -18,7 +18,7 @@ namespace TurtleMatix.Core.Test.WhenUsingTurtleAlgorithms
         [TestMethod]
         public void ThenTheTwoCommandsShouldMatchs()
         {
-            _generatedAlgorithm.ShouldEqual(Algorithm);
+            _generatedAlgorithm.ToString().ShouldEqual(Algorithm.ToString());
         }
         
 

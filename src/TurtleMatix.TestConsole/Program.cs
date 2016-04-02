@@ -1,6 +1,6 @@
 ﻿using System;
 using PubNubMessaging.Core;
-using TurtleMatix.Communication.Core;
+using TurtleMatix.Communication;
 
 namespace TurtleMatix.TestConsole
 {

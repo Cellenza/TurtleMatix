@@ -19,7 +19,7 @@ namespace TurtleMatix.Core.Test.WhenUsingTurtleCommands
         [TestMethod]
         public void ThenTheTwoCommandsShouldMatchs()
         {
-            _GeneratedCommand.ShouldEqual(Command);
+            _GeneratedCommand.ToString().ShouldEqual(Command.ToString());
         }
         
 
