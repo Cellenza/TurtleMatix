@@ -5,12 +5,12 @@ using System.Reflection;
 
 namespace TurtleMatix.Turtle.Application.Generic
 {
-    public class EngineFactory : _IEngineFactory
+    public class EngineFactory : IEngineFactory
     {
 
         private readonly Assembly _turtleHostAssembly = Assembly.Load(new AssemblyName("TurtleMatix.Turtle.Host"));
 
-        private readonly IEnumerable<_IEngine> _engines;
+        private readonly IEnumerable<IEngine> _engines;
 
         public EngineFactory()
         {
@@ -19,20 +19,25 @@ namespace TurtleMatix.Turtle.Application.Generic
                 var types = _turtleHostAssembly
                     .DefinedTypes.Where(x =>
                         x.IsClass && !x.IsAbstract &&
-                        x.ImplementedInterfaces.Any(y => y == typeof (_IEngine)));
+                        x.ImplementedInterfaces.Any(y => y == typeof (IEngine)));
 
-                _engines = types.Select(x => (_IEngine) Activator.CreateInstance(x.AsType())).ToList();
+                _engines = types.Select(x => (IEngine) Activator.CreateInstance(x.AsType())).ToList();
             }
         }
 
-        public _IEngine GetFrontEngine()
+        public IEngine GetLeftEngine()
         {
-            return _engines.First(x=>x.GetType().Name == "FrontEngine");
+            return _engines.First(x => x.GetType().Name == "LeftEngine");
         }
 
-        public _IEngine GetBackEngine()
+        public IEngine GetRightEngine()
         {
-            return _engines.First(x => x.GetType().Name == "BackEngine");
+            return _engines.First(x => x.GetType().Name == "RightEngine");
+        }
+
+        public IEngine GetPenEngine()
+        {
+            return _engines.First(x => x.GetType().Name == "PenEngine");
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace TurtleMatix.Turtle.Application.Generic
 {
-    public interface _IEngine
+    public interface IEngine
     {
         void TurnOn(EngineDirection direction);
         void TurnOff();

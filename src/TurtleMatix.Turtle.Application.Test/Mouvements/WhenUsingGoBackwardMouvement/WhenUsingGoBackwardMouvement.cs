@@ -8,18 +8,18 @@ namespace TurtleMatix.Turtle.Application.Test.Mouvements.WhenUsingGoBackwardMouv
     {
         protected GoBackwardMouvement Mouvement { get; set; }
 
-        protected Mock<_IEngineFactory> EngineFactory { get; private set; }
+        protected Mock<IEngineFactory> EngineFactory { get; private set; }
 
-        protected Mock<_IEngine> Engine { get; private set; }
+        protected Mock<IEngine> Engine { get; private set; }
 
         protected int Distance => 1;
-        protected int ExpectedTime => AbstractDirectMouvement.TenCentimeterMouvementDuration / 10;
+        protected int ExpectedTime => AbstractMouvement.TenCentimeterMouvementDuration / 10;
         
         protected override void Establish_context()
         {
             base.Establish_context();
-            EngineFactory = new Mock<_IEngineFactory>();
-            Engine = new Mock<_IEngine>();
+            EngineFactory = new Mock<IEngineFactory>();
+            Engine = new Mock<IEngine>();
             EngineFactory.Setup(x => x.GetBackEngine()).Returns(Engine.Object);
             Mouvement = new GoBackwardMouvement(EngineFactory.Object);
         }

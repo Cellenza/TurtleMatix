@@ -5,11 +5,11 @@ namespace TurtleMatix.Turtle.Host.Core
 {
     public class EmbeddProcessHost
     {
-        private readonly _IMouvementFactory _mouvementFactory;
+        private readonly IMouvementFactory _mouvementFactory;
 
         private readonly ReceptionListener _receptionListener;
 
-        public EmbeddProcessHost(_IMouvementFactory mouvementFactory)
+        public EmbeddProcessHost(IMouvementFactory mouvementFactory)
         {
             _mouvementFactory = mouvementFactory;
             _receptionListener = new ReceptionListener();

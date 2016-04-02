@@ -10,7 +10,7 @@ namespace TurtleMatix.Turtle.Application.Test.Mouvements.WhenUsingMouvementFacto
     [TestClass]
     public class AndCheckIfEachOperatorCorrespondsToAMouvement : WhenUsingMouvementFactory
     {
-        private _IMouvement _mouvement;
+        private IMouvement _mouvement;
 
         private ArgumentOutOfRangeException _catchedException;
 

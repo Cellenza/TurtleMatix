@@ -9,7 +9,7 @@ namespace TurtleMatix.Turtle.Application.Test.Mouvements.WhenUsingMouvementFacto
     [TestClass]
     public class AndTryToGetAdvanceMouvement : WhenUsingMouvementFactory
     {
-        private _IMouvement _mouvement;
+        private IMouvement _mouvement;
         
         protected override void Because_of()
         {

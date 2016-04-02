@@ -7,12 +7,12 @@ namespace TurtleMatix.Turtle.Application.Test.Mouvements.WhenUsingMouvementFacto
     {
         protected MouvementFacotry Factory { get; set; }
 
-        protected Mock<_IEngineFactory> EngineFactory { get; private set; }
+        protected Mock<IEngineFactory> EngineFactory { get; private set; }
         
         protected override void Establish_context()
         {
             base.Establish_context();
-            EngineFactory = new Mock<_IEngineFactory>();
+            EngineFactory = new Mock<IEngineFactory>();
             Factory = new MouvementFacotry(EngineFactory.Object);
         }
     }

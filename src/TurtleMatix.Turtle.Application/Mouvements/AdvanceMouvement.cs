@@ -3,21 +3,24 @@ using TurtleMatix.Turtle.Application.Generic;
 
 namespace TurtleMatix.Turtle.Application.Mouvements
 {
-    public class AdvanceMouvement : AbstractDirectMouvement
+    public class AdvanceMouvement : AbstractMouvement
     {
-        private readonly _IEngineFactory _engineFactory;
+        private readonly IEngineFactory _engineFactory;
 
-        public AdvanceMouvement(_IEngineFactory engineFactory)
+        public AdvanceMouvement(IEngineFactory engineFactory)
         {
             _engineFactory = engineFactory;
         }
 
         public override void Execute(int value)
         {
-            var backEngine = _engineFactory.GetBackEngine();
-            backEngine.TurnOn(EngineDirection.LeftToRight);
+            var leftEngine = _engineFactory.GetLeftEngine();
+            var rightEngine = _engineFactory.GetRightEngine();
+            leftEngine.TurnOn(EngineDirection.RightToLeft);
+            rightEngine.TurnOn(EngineDirection.RightToLeft);
             Task.Delay(CalculateRuntime(value)).Wait();
-            backEngine.TurnOff();
+            leftEngine.TurnOff();
+            rightEngine.TurnOff();
         }
     }
 }

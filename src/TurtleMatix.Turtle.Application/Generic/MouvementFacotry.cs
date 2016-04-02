@@ -4,24 +4,21 @@ using TurtleMatix.Turtle.Application.Mouvements;
 
 namespace TurtleMatix.Turtle.Application.Generic
 {
-    public class MouvementFacotry : _IMouvementFactory
+    public class MouvementFacotry : IMouvementFactory
     {
-        private readonly _IEngineFactory _engineFactory;
+        private readonly IEngineFactory _engineFactory;
 
-        public MouvementFacotry(_IEngineFactory engineFactory)
+        public MouvementFacotry(IEngineFactory engineFactory)
         {
             _engineFactory = engineFactory;
         }
 
-        public _IMouvement GetMouvement(TurtleOperator turtleOperator)
+        public IMouvement GetMouvement(TurtleOperator turtleOperator)
         {
             switch (turtleOperator)
             {
                 case TurtleOperator.Advance:
                     return new AdvanceMouvement(_engineFactory);
-
-                case TurtleOperator.GoBackward:
-                    return new GoBackwardMouvement(_engineFactory);
 
                 case TurtleOperator.Wait:
                     return new WaitMouvement();

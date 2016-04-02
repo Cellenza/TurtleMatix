@@ -3,7 +3,7 @@ using TurtleMatix.Turtle.Application.Generic;
 
 namespace TurtleMatix.Turtle.Host.Engines
 {
-    public abstract class AbstractEngine : _IEngine
+    public abstract class AbstractEngine : IEngine
     {
         protected GpioController Controller { get; private set; }
 

@@ -3,7 +3,10 @@ namespace TurtleMatix.Core
     public enum TurtleOperator
     {
         Advance,
-        GoBackward,
+        TurnLeft,
+        TurnRight,
+        PenDown,
+        PenUp,
         Wait
     }
 }

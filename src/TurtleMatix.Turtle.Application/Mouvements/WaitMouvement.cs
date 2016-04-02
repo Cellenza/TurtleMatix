@@ -3,7 +3,7 @@ using TurtleMatix.Turtle.Application.Generic;
 
 namespace TurtleMatix.Turtle.Application.Mouvements
 {
-    public class WaitMouvement : AbstractDirectMouvement
+    public class WaitMouvement : AbstractMouvement
     {
         public override void Execute(int value)
         {

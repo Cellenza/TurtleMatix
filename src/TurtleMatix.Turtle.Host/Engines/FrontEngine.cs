@@ -3,7 +3,7 @@ using TurtleMatix.Turtle.Application.Generic;
 
 namespace TurtleMatix.Turtle.Host.Engines
 {
-    public class FrontEngine : _IEngine
+    public class FrontEngine : IEngine
     {
         public void TurnOn(EngineDirection direction)
         {

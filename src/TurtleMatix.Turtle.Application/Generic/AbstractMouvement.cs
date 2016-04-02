@@ -1,6 +1,6 @@
 namespace TurtleMatix.Turtle.Application.Generic
 {
-    public abstract class AbstractDirectMouvement : _IMouvement
+    public abstract class AbstractMouvement : IMouvement
     {
         public const int TenCentimeterMouvementDuration = 5000;
 
