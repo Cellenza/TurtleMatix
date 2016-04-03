@@ -2,7 +2,8 @@
 {
     public interface IEngine
     {
-        void TurnOn(EngineDirection direction);
-        void TurnOff();
+        void RightToLeft();
+        void LeftToRight();
+        void Stop();
     }
 }

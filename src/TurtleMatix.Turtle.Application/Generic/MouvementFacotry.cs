@@ -19,6 +19,18 @@ namespace TurtleMatix.Turtle.Application.Generic
             {
                 case TurtleOperator.Advance:
                     return new AdvanceMouvement(_engineFactory);
+                
+                case TurtleOperator.TurnLeft:
+                    return new TurnLeftMouvement(_engineFactory);
+
+                case TurtleOperator.TurnRight:
+                    return new TurnRightMouvement(_engineFactory);
+
+                case TurtleOperator.PenDown:
+                    return new PenDownMouvement(_engineFactory);
+
+                case TurtleOperator.PenUp:
+                    return new PenUpMouvement(_engineFactory);
 
                 case TurtleOperator.Wait:
                     return new WaitMouvement();

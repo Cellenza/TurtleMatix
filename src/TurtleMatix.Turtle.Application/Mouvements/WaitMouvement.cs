@@ -7,7 +7,12 @@ namespace TurtleMatix.Turtle.Application.Mouvements
     {
         public override void Execute(int value)
         {
-            Task.Delay(value*1000).Wait();
+            Task.Delay(CalculateExecutionTime(value)).Wait();
+        }
+
+        protected override int CalculateExecutionTime(int commandValue)
+        {
+            return commandValue*1000;
         }
     }
 }

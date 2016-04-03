@@ -105,8 +105,8 @@
     </Compile>
     <Compile Include="Core\EmbeddProcessHost.cs" />
     <Compile Include="Engines\AbstractEngine.cs" />
-    <Compile Include="Engines\BackEngine.cs" />
-    <Compile Include="Engines\FrontEngine.cs" />
+    <Compile Include="Engines\RightEngine.cs" />
+    <Compile Include="Engines\LeftEngine.cs" />
     <Compile Include="Engines\PenEngine.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

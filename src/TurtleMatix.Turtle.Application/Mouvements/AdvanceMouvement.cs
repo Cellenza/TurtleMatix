@@ -5,6 +5,7 @@ namespace TurtleMatix.Turtle.Application.Mouvements
 {
     public class AdvanceMouvement : AbstractMouvement
     {
+        private const int TenCentimeterMouvementDuration = 5000;
         private readonly IEngineFactory _engineFactory;
 
         public AdvanceMouvement(IEngineFactory engineFactory)
@@ -16,11 +17,16 @@ namespace TurtleMatix.Turtle.Application.Mouvements
         {
             var leftEngine = _engineFactory.GetLeftEngine();
             var rightEngine = _engineFactory.GetRightEngine();
-            leftEngine.TurnOn(EngineDirection.RightToLeft);
-            rightEngine.TurnOn(EngineDirection.RightToLeft);
-            Task.Delay(CalculateRuntime(value)).Wait();
-            leftEngine.TurnOff();
-            rightEngine.TurnOff();
+            leftEngine.RightToLeft();
+            rightEngine.RightToLeft();
+            Task.Delay(CalculateExecutionTime(value)).Wait();
+            leftEngine.Stop();
+            rightEngine.Stop();
+        }
+
+        protected override int CalculateExecutionTime(int commandValue)
+        {
+            return (TenCentimeterMouvementDuration/10)*commandValue;
         }
     }
 }

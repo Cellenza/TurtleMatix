@@ -23,8 +23,10 @@ namespace TurtleMatix.TestConsole
                 WhenErrorHandeled);
 
             var key = string.Empty;
+
             do
             {
+                Console.Write("Console ready, waiting for instruction : ");
                 key = Console.ReadLine();
                 if (!key.Equals("exit", StringComparison.CurrentCultureIgnoreCase))
                 {

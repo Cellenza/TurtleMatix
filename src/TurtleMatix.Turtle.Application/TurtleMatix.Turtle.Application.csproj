@@ -43,11 +43,15 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Generic\EngineDirection.cs" />
+    <Compile Include="Generic\AbstractRotateMouvement.cs" />
     <Compile Include="Generic\EngineFactory.cs" />
     <Compile Include="Generic\IEngine.cs" />
     <Compile Include="Generic\IEngineFactory.cs" />
     <Compile Include="Generic\MouvementFacotry.cs" />
+    <Compile Include="Mouvements\PenDownMouvement.cs" />
+    <Compile Include="Mouvements\PenUpMouvement.cs" />
+    <Compile Include="Mouvements\TurnLeftMouvement.cs" />
+    <Compile Include="Mouvements\TurnRightMouvement.cs" />
     <Compile Include="Mouvements\WaitMouvement.cs" />
     <Compile Include="Mouvements\AdvanceMouvement.cs" />
     <Compile Include="Generic\AbstractMouvement.cs" />
