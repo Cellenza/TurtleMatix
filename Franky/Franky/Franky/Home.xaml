@@ -23,10 +23,10 @@
     <Image Source="CellenzaLogo.png" x:Name="MenuBottom" />
 
     <!-- Instructions on left menu -->
-    <franky:InstructionButton BackgroundColor="#9ecf95" TranslationX="10" Text="Avancer" Instruction="Advance" TranslationY="70" />
+    <franky:InstructionButton BackgroundColor="#9ecf95" TranslationX="10" Text="Avancer" Value="1" Instruction="Advance" TranslationY="70" />
     <franky:InstructionButton BackgroundColor="#eca78c" TranslationX="10" Text="Tourner a droite" Value="90" Instruction="TurnRight" TranslationY="130" />
     <franky:InstructionButton BackgroundColor="#eca78c" TranslationX="10" Text="Tourner a gauche" Value="90" Instruction="TurnLeft" TranslationY="190" />
-    <franky:InstructionButton BackgroundColor="#aee2f6" TranslationX="10" Text="Reculer" Instruction="Back" TranslationY="250" />
+    <franky:InstructionButton BackgroundColor="#aee2f6" TranslationX="10" Text="Reculer" Value="1" Instruction="Back" TranslationY="250" />
     <franky:InstructionButton BackgroundColor="#f7e181" TranslationX="10" Text="Répéter 2 fois" Value="2" Instruction="ForEach" TranslationY="310" />
     <franky:InstructionButton BackgroundColor="#f7e181" TranslationX="10" Text="Répéter 4 fois" Value="4" Instruction="ForEach" TranslationY="370" />
 
