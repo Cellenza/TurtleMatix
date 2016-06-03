@@ -18,9 +18,12 @@ namespace Franky
 
     public partial class Home : ContentPage
     {
+        private readonly IAlgorithmPublisher algorithmPublisher;
+
         public Home()
         {
             InitializeComponent();
+            this.algorithmPublisher = new PubnubAlgorithmPublisher();
             this.SizeChanged += Home_SizeChanged;
         }
 
@@ -36,12 +39,7 @@ namespace Franky
         {
             var turtleAlgorithm = this.DropInstructions.GetTurtleAlgorithm();
 
-            var deviceClient = DeviceClient.CreateFromConnectionString("HostName=Franky.azure-devices.net;DeviceId=Franky;SharedAccessKey=yCSD5Eo91L8FOFKgZD/ugTZlYvAK7C3qGW1NFWV9m68=", TransportType.Http1);
-
-            var text = JsonConvert.SerializeObject(turtleAlgorithm);
-            var msg = new Message(Encoding.UTF8.GetBytes(text));
-
-            await deviceClient.SendEventAsync(msg);
+            await this.algorithmPublisher.SendAlgorithm(turtleAlgorithm);
 
             DispayDebugInstructions(turtleAlgorithm.Commands, 0);
         }
@@ -54,7 +52,7 @@ namespace Franky
 
                 if (instructionDto.Children != null)
                 {
-                    DispayDebugInstructions(instructionDto.Children, index + 1);
+                    Home.DispayDebugInstructions(instructionDto.Children, index + 1);
                 }
             }
         }
