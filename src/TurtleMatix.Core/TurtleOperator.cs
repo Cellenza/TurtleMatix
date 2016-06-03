@@ -7,6 +7,8 @@ namespace TurtleMatix.Core
         TurnRight,
         PenDown,
         PenUp,
-        Wait
+        Wait,
+        ForEach,
+        Back
     }
 }

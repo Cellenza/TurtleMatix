@@ -2,6 +2,8 @@
 {
     using System;
 
+    using TurtleMatix.Core;
+
     using Xamarin.Forms;
     public class InstructionButton : AbsoluteLayout
     {
@@ -13,9 +15,9 @@
 
         public event EventHandler Selected;
 
-        public Instruction Instruction { get; set; }
+        public TurtleOperator Instruction { get; set; }
 
-        public double Value { get; set; }
+        public int Value { get; set; }
 
         public string Text
         {

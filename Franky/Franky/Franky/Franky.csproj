@@ -35,6 +35,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\src\TurtleMatix.Core\TurtleAlgorithm.cs">
+      <Link>Algorithm\TurtleAlgorithm.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\TurtleMatix.Core\TurtleCommand.cs">
+      <Link>Algorithm\TurtleCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\TurtleMatix.Core\TurtleOperator.cs">
+      <Link>Algorithm\TurtleOperator.cs</Link>
+    </Compile>
     <Compile Include="App.cs" />
     <Compile Include="DropInstructions.cs" />
     <Compile Include="FakeInstructionButton.cs" />
@@ -43,7 +52,6 @@
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Instruction.cs" />
     <Compile Include="InstructionButton.cs" />
     <Compile Include="InstructionCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
