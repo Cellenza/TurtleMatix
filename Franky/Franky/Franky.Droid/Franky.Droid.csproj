@@ -137,6 +137,7 @@
     <AndroidResource Include="Resources\drawable\Franky_Logo_60.png" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\CleanButton.png" />
     <Content Include="Resources\drawable\RunButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
