@@ -2,6 +2,8 @@
 
 namespace TurtleMatix.Core
 {
+    using System.Collections.Generic;
+
     public class TurtleCommand
     {
 
@@ -14,6 +16,8 @@ namespace TurtleMatix.Core
         public TurtleOperator Operator { get; set; }
 
         public int Operand { get; set; }
+
+        public List<TurtleCommand> Children { get; set; }
 
         public static TurtleCommand FromString(string input)
         {

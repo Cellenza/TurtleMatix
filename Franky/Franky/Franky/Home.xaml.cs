@@ -14,6 +14,8 @@ namespace Franky
 
     using Newtonsoft.Json;
 
+    using TurtleMatix.Core;
+
     public partial class Home : ContentPage
     {
         public Home()
@@ -32,23 +34,23 @@ namespace Franky
 
         private async void RunClick(object sender, EventArgs e)
         {
-            var instructions = this.DropInstructions.GetInstructions();
+            var turtleAlgorithm = this.DropInstructions.GetTurtleAlgorithm();
 
-            DeviceClient deviceClient = DeviceClient.CreateFromConnectionString("HostName=Franky.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=6iy0ddUa8MerZZYYH8mm2whZU4cV4kEWzacv83I/mtU=", TransportType.Http1);
+            var deviceClient = DeviceClient.CreateFromConnectionString("HostName=Franky.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=6iy0ddUa8MerZZYYH8mm2whZU4cV4kEWzacv83I/mtU=", TransportType.Http1);
 
-            var text = JsonConvert.SerializeObject(instructions);
+            var text = JsonConvert.SerializeObject(turtleAlgorithm);
             var msg = new Message(Encoding.UTF8.GetBytes(text));
 
             await deviceClient.SendEventAsync(msg);
 
-            DispayDebugInstructions(instructions, 0);
+            DispayDebugInstructions(turtleAlgorithm.Commands, 0);
         }
 
-        private static void DispayDebugInstructions(List<InstructionDto> instructions, int index)
+        private static void DispayDebugInstructions(List<TurtleCommand> instructions, int index)
         {
             foreach (var instructionDto in instructions)
             {
-                Debug.WriteLine(string.Concat(Enumerable.Repeat(">", index)) + instructionDto.Instruction + " " + instructionDto.Value);
+                Debug.WriteLine(string.Concat(Enumerable.Repeat(">", index)) + instructionDto.Operator + " " + instructionDto.Operand);
 
                 if (instructionDto.Children != null)
                 {

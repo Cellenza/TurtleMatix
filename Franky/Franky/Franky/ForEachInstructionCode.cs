@@ -4,6 +4,8 @@ namespace Franky
     using System.Diagnostics;
     using System.Linq;
 
+    using TurtleMatix.Core;
+
     using Xamarin.Forms;
 
     public class ForEachInstructionCode : InstructionCode
@@ -217,7 +219,7 @@ namespace Franky
 
         private InstructionCode CreateInstructionCode(InstructionButton instructionButton)
         {
-            if (instructionButton.Instruction == Instruction.ForEach)
+            if (instructionButton.Instruction == TurtleOperator.ForEach)
             {
                 var instructionCode = new ForEachInstructionCode(this.WidthRequest - 20, 50);
                 instructionCode.SetFromInstructionButton(instructionButton);
@@ -229,24 +231,20 @@ namespace Franky
             return instruction;
         }
 
-        public List<InstructionDto> GetInstructions()
+        public List<TurtleCommand> GetInstructions()
         {
-            var q = from i in this.instructionCodes select this.CreateDto(i);
+            var q = from i in this.instructionCodes select this.CreateCommand(i);
 
             return q.ToList();
         }
 
-        private InstructionDto CreateDto(InstructionCode instructionCode)
+        private TurtleCommand CreateCommand(InstructionCode instructionCode)
         {
-            var ins = new InstructionDto
-            {
-                Instruction = instructionCode.Instruction,
-                Value = instructionCode.Value,
-            };
+            var ins = new TurtleCommand(instructionCode.Instruction, instructionCode.Value);
 
             switch (instructionCode.Instruction)
             {
-                case Instruction.ForEach:
+                case TurtleOperator.ForEach:
                     ins.Children = (instructionCode as ForEachInstructionCode).GetInstructions();
                     break; ;
             }

@@ -7,7 +7,7 @@ namespace TurtleMatix.Core
 {
     public class TurtleAlgorithm
     {
-        public List<TurtleCommand> Commands { get; }
+        public List<TurtleCommand> Commands { get; set; }
 
         public TurtleAlgorithm()
         {

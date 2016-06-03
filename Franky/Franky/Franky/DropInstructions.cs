@@ -2,6 +2,8 @@ namespace Franky
 {
     using System.Collections.Generic;
 
+    using TurtleMatix.Core;
+
     using Xamarin.Forms;
 
     public class DropInstructions : AbsoluteLayout
@@ -67,23 +69,14 @@ namespace Franky
             return y < this.y2;
         }
 
-        public List<InstructionDto> GetInstructions()
+        public TurtleAlgorithm GetTurtleAlgorithm()
         {
-            return this.globalInstructionCode.GetInstructions();
+            return new TurtleAlgorithm() { Commands = this.globalInstructionCode.GetInstructions() };
         }
 
         public void Clean()
         {
             this.globalInstructionCode.Clean();
         }
-    }
-
-    public class InstructionDto
-    {
-        public Instruction Instruction { get; set; }
-
-        public List<InstructionDto> Children { get; set; }
-
-        public double Value { get; set; }
     }
 }
