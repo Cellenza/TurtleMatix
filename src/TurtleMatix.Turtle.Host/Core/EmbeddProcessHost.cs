@@ -7,12 +7,12 @@ namespace TurtleMatix.Turtle.Host.Core
     {
         private readonly IMouvementFactory _mouvementFactory;
 
-        private readonly ReceptionListener _receptionListener;
+        private readonly IReceptionListener _receptionListener;
 
         public EmbeddProcessHost(IMouvementFactory mouvementFactory)
         {
             _mouvementFactory = mouvementFactory;
-            _receptionListener = new ReceptionListener();
+            _receptionListener = new AzureReceptionListener();
         }
 
         public void StartProcess()
