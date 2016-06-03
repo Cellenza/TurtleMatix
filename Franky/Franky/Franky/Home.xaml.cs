@@ -34,7 +34,7 @@ namespace Franky
         {
             var instructions = this.DropInstructions.GetInstructions();
 
-            DeviceClient deviceClient = DeviceClient.CreateFromConnectionString("<replace>", TransportType.Http1);
+            DeviceClient deviceClient = DeviceClient.CreateFromConnectionString("HostName=Franky.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=6iy0ddUa8MerZZYYH8mm2whZU4cV4kEWzacv83I/mtU=", TransportType.Http1);
 
             var text = JsonConvert.SerializeObject(instructions);
             var msg = new Message(Encoding.UTF8.GetBytes(text));
