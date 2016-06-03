@@ -160,7 +160,6 @@ namespace Franky
 
                     if (instruction.IsOnInstruction(position))
                     {
-                        //Debug.WriteLine("Is on : " + instruction.Text);
                         newIndex = index;
                         break;
                     }
@@ -171,7 +170,6 @@ namespace Franky
                 newIndex = 0;
             }
 
-            //Debug.WriteLine("Is on : " + newIndex + " " + position);
 
             if (newIndex == -1)
             {
@@ -185,7 +183,6 @@ namespace Franky
                 }
             }
 
-            //Debug.WriteLine("Is on : " + newIndex + "/" + this.instructionCodes.Count + " " + position);
             return newIndex;
         }
 
@@ -197,8 +194,6 @@ namespace Franky
 
                 this.createInstructionCode.IsVisible = false;
                 this.instructionCodes.Remove(this.createInstructionCode);
-                //this.Children.Remove(this.createInstructionCode);
-                //this.createInstructionCode = null;
                 this.currentIndex = -1;
             }
         }
@@ -245,7 +240,7 @@ namespace Franky
             switch (instructionCode.Instruction)
             {
                 case TurtleOperator.ForEach:
-                    ins.Children = (instructionCode as ForEachInstructionCode).GetInstructions();
+                    ins.Childrens = (instructionCode as ForEachInstructionCode).GetInstructions();
                     break; ;
             }
 

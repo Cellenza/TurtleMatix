@@ -50,9 +50,9 @@ namespace Franky
             {
                 Debug.WriteLine(string.Concat(Enumerable.Repeat(">", index)) + instructionDto.Operator + " " + instructionDto.Operand);
 
-                if (instructionDto.Children != null)
+                if (instructionDto.Childrens != null)
                 {
-                    Home.DispayDebugInstructions(instructionDto.Children, index + 1);
+                    Home.DispayDebugInstructions(instructionDto.Childrens, index + 1);
                 }
             }
         }
