@@ -2,12 +2,12 @@ using TurtleMatix.Turtle.Application.Generic;
 
 namespace TurtleMatix.Turtle.Application.Mouvements
 {
-    public class PenUpMouvement : AbstractMouvement
+    public class PenUpMovement : AbstractMovement
     {
         private const int TenCentimeterMouvementDuration = 5000;
         private readonly IEngineFactory _engineFactory;
 
-        public PenUpMouvement(IEngineFactory engineFactory)
+        public PenUpMovement(IEngineFactory engineFactory)
         {
             _engineFactory = engineFactory;
         }

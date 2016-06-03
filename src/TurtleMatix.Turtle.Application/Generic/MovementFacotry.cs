@@ -4,36 +4,36 @@ using TurtleMatix.Turtle.Application.Mouvements;
 
 namespace TurtleMatix.Turtle.Application.Generic
 {
-    public class MouvementFacotry : IMouvementFactory
+    public class MovementFacotry : IMovementFactory
     {
         private readonly IEngineFactory _engineFactory;
 
-        public MouvementFacotry(IEngineFactory engineFactory)
+        public MovementFacotry(IEngineFactory engineFactory)
         {
             _engineFactory = engineFactory;
         }
 
-        public IMouvement GetMouvement(TurtleOperator turtleOperator)
+        public IMovement GetMovement(TurtleOperator turtleOperator)
         {
             switch (turtleOperator)
             {
                 case TurtleOperator.Advance:
-                    return new AdvanceMouvement(_engineFactory);
+                    return new AdvanceMovement(_engineFactory);
                 
                 case TurtleOperator.TurnLeft:
-                    return new TurnLeftMouvement(_engineFactory);
+                    return new TurnLeftMovement(_engineFactory);
 
                 case TurtleOperator.TurnRight:
-                    return new TurnRightMouvement(_engineFactory);
+                    return new TurnRightMovement(_engineFactory);
 
                 case TurtleOperator.PenDown:
-                    return new PenDownMouvement(_engineFactory);
+                    return new PenDownMovement(_engineFactory);
 
                 case TurtleOperator.PenUp:
-                    return new PenUpMouvement(_engineFactory);
+                    return new PenUpMovement(_engineFactory);
 
                 case TurtleOperator.Wait:
-                    return new WaitMouvement();
+                    return new WaitMovement();
 
                 default:
                     throw new ArgumentOutOfRangeException(nameof(turtleOperator), turtleOperator, null);

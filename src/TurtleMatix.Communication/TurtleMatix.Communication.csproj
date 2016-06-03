@@ -45,7 +45,9 @@
   <ItemGroup>
     <Compile Include="PubNubParams.cs" />
     <Compile Include="Reception\CommandReceivedEventHandler.cs" />
-    <Compile Include="Reception\ReceptionListener.cs" />
+    <Compile Include="Reception\IReceptionListener.cs" />
+    <Compile Include="Reception\AzureReceptionListener.cs" />
+    <Compile Include="Reception\PubNubReceptionListener.cs" />
     <Compile Include="Reception\CommandReceivedEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

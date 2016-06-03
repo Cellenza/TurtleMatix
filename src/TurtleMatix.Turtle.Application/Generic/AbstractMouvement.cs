@@ -1,6 +1,6 @@
 namespace TurtleMatix.Turtle.Application.Generic
 {
-    public abstract class AbstractMouvement : IMouvement
+    public abstract class AbstractMovement : IMovement
     {
         public abstract void Execute(int value);
         

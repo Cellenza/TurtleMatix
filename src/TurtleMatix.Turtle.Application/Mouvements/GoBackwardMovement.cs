@@ -3,11 +3,12 @@ using TurtleMatix.Turtle.Application.Generic;
 
 namespace TurtleMatix.Turtle.Application.Mouvements
 {
-    public class TurnRightMovement : AbstractRotateMovement
+    public class GoBackwardMovement : AbstractMovement
     {
+        private const int TenCentimeterMouvementDuration = 5000;
         private readonly IEngineFactory _engineFactory;
 
-        public TurnRightMovement(IEngineFactory engineFactory)
+        public GoBackwardMovement(IEngineFactory engineFactory)
         {
             _engineFactory = engineFactory;
         }
@@ -16,11 +17,16 @@ namespace TurtleMatix.Turtle.Application.Mouvements
         {
             var leftEngine = _engineFactory.GetLeftEngine();
             var rightEngine = _engineFactory.GetRightEngine();
-            leftEngine.RightToLeft();
+            leftEngine.LeftToRight();
             rightEngine.LeftToRight();
             Task.Delay(CalculateExecutionTime(value)).Wait();
             leftEngine.Stop();
             rightEngine.Stop();
+        }
+
+        protected override int CalculateExecutionTime(int commandValue)
+        {
+            return (TenCentimeterMouvementDuration / 10) * commandValue;
         }
     }
 }

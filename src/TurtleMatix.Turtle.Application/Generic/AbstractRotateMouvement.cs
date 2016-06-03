@@ -1,6 +1,6 @@
 namespace TurtleMatix.Turtle.Application.Generic
 {
-    public abstract class AbstractRotateMouvement : AbstractMouvement
+    public abstract class AbstractRotateMovement : AbstractMovement
     {
         protected override sealed int CalculateExecutionTime(int commandValue)
         {
