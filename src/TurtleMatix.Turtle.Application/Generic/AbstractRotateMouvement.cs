@@ -4,10 +4,19 @@ namespace TurtleMatix.Turtle.Application.Generic
     {
         protected override sealed int CalculateExecutionTime(int commandValue)
         {
-            if (commandValue < 1 || commandValue > 8)
-                return 0;
-
-            return commandValue*200;
+            switch (commandValue)
+            {
+                case 1:
+                    return 220;
+                case 2:
+                    return 340;
+                case 3:
+                    return 460;
+                case 4:
+                    return 620;
+                default:
+                    return 0;
+            }
         }
     }
 }
