@@ -36,7 +36,7 @@ namespace Franky
         {
             var turtleAlgorithm = this.DropInstructions.GetTurtleAlgorithm();
 
-            var deviceClient = DeviceClient.CreateFromConnectionString("HostName=Franky.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=6iy0ddUa8MerZZYYH8mm2whZU4cV4kEWzacv83I/mtU=", TransportType.Http1);
+            var deviceClient = DeviceClient.CreateFromConnectionString("HostName=Franky.azure-devices.net;DeviceId=Franky;SharedAccessKey=yCSD5Eo91L8FOFKgZD/ugTZlYvAK7C3qGW1NFWV9m68=", TransportType.Http1);
 
             var text = JsonConvert.SerializeObject(turtleAlgorithm);
             var msg = new Message(Encoding.UTF8.GetBytes(text));
