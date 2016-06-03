@@ -76,6 +76,10 @@
       <Project>{bcbe1439-1fe9-453d-b4c6-f099a80ca4b2}</Project>
       <Name>TurtleMatix.Communication</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TurtleMatix.Core\TurtleMatix.Core.csproj">
+      <Project>{C0C04258-0808-4C87-8DCE-B1661C7E5021}</Project>
+      <Name>TurtleMatix.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
