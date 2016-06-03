@@ -1,4 +1,5 @@
 ﻿using Windows.UI.Xaml.Controls;
+using TurtleMatix.Communication.Reception;
 using TurtleMatix.Turtle.Application.Generic;
 using TurtleMatix.Turtle.Host.Core;
 
@@ -11,13 +12,13 @@ namespace TurtleMatix.Turtle.Host
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private EmbeddProcessHost _host;
+        private readonly EmbeddProcessHost _host;
         public MainPage()
         {
             InitializeComponent();
 
-            _host = new EmbeddProcessHost(new MouvementFacotry(new EngineFactory()));
-            _host.StartProcess();
+            _host = new EmbeddProcessHost(new PubNubReceptionListener(), new MovementFacotry(new EngineFactory()));
+            _host.StartProcess().Wait();
         }
     }
 }

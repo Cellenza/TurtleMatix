@@ -3,11 +3,11 @@ using TurtleMatix.Turtle.Application.Generic;
 
 namespace TurtleMatix.Turtle.Application.Mouvements
 {
-    public class TurnLeftMouvement : AbstractRotateMouvement
+    public class TurnLeftMovement : AbstractRotateMovement
     {
         private readonly IEngineFactory _engineFactory;
 
-        public TurnLeftMouvement(IEngineFactory engineFactory)
+        public TurnLeftMovement(IEngineFactory engineFactory)
         {
             _engineFactory = engineFactory;
         }

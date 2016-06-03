@@ -5,7 +5,7 @@ namespace TurtleMatix.Communication.Reception
     public interface IReceptionListener
     {
         event CommandReceivedEventHandler OnCommandReceivedEvent;
-        Task Initialize();
+        void Initialize();
         Task StartListening();
     }
 }

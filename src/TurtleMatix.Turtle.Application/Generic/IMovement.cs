@@ -1,6 +1,6 @@
 ﻿namespace TurtleMatix.Turtle.Application.Generic
 {
-    public interface IMouvement
+    public interface IMovement
     {
         void Execute(int value);
     }

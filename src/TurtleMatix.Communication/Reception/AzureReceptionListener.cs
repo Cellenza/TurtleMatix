@@ -8,18 +8,14 @@ namespace TurtleMatix.Communication.Reception
 {
     public class AzureReceptionListener : IReceptionListener
     {
-        private const string DeviceConnectionString = "<replace>";
+        private const string DeviceConnectionString = "HostName=Franky.azure-devices.net;DeviceId=Franky;SharedAccessKey=yCSD5Eo91L8FOFKgZD/ugTZlYvAK7C3qGW1NFWV9m68=";
         private DeviceClient _deviceClient;
 
         public event CommandReceivedEventHandler OnCommandReceivedEvent;
 
-        public Task Initialize()
+        public void Initialize()
         {
-            return Task.Run(() =>
-            {
-                _deviceClient = DeviceClient.CreateFromConnectionString(DeviceConnectionString);
-            });
-
+            _deviceClient = DeviceClient.CreateFromConnectionString(DeviceConnectionString, TransportType.Http1);
         }
 
         public async Task StartListening()

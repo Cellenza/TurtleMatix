@@ -47,7 +47,8 @@
     <Compile Include="Generic\EngineFactory.cs" />
     <Compile Include="Generic\IEngine.cs" />
     <Compile Include="Generic\IEngineFactory.cs" />
-    <Compile Include="Generic\MouvementFacotry.cs" />
+    <Compile Include="Generic\MovementFacotry.cs" />
+    <Compile Include="Mouvements\GoBackwardMovement.cs" />
     <Compile Include="Mouvements\PenDownMouvement.cs" />
     <Compile Include="Mouvements\PenUpMouvement.cs" />
     <Compile Include="Mouvements\TurnLeftMouvement.cs" />
@@ -55,8 +56,8 @@
     <Compile Include="Mouvements\WaitMouvement.cs" />
     <Compile Include="Mouvements\AdvanceMouvement.cs" />
     <Compile Include="Generic\AbstractMouvement.cs" />
-    <Compile Include="Generic\IMouvement.cs" />
-    <Compile Include="Generic\IMouvementFactory.cs" />
+    <Compile Include="Generic\IMovement.cs" />
+    <Compile Include="Generic\IMovementFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

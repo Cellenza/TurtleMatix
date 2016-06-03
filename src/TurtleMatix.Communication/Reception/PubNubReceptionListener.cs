@@ -12,17 +12,14 @@ namespace TurtleMatix.Communication.Reception
 
         public event CommandReceivedEventHandler OnCommandReceivedEvent;
 
-        public Task Initialize()
+        public void Initialize()
         {
-            return Task.Run(() =>
-            {
-                _pubnubMEssageQueue = new Pubnub(
-                    PubNubParams.PubNubPublisherKey,
-                    PubNubParams.PubNubSuscriberKey,
-                    PubNubParams.PubNubSecret,
-                    PubNubParams.PubNubCipherKey,
-                    true);
-            });
+            _pubnubMEssageQueue = new Pubnub(
+                PubNubParams.PubNubPublisherKey,
+                PubNubParams.PubNubSuscriberKey,
+                PubNubParams.PubNubSecret,
+                PubNubParams.PubNubCipherKey,
+                true);
         }
 
         public Task StartListening()

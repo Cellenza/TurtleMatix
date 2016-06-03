@@ -3,12 +3,12 @@ using TurtleMatix.Turtle.Application.Generic;
 
 namespace TurtleMatix.Turtle.Application.Mouvements
 {
-    public class AdvanceMouvement : AbstractMouvement
+    public class AdvanceMovement : AbstractMovement
     {
         private const int TenCentimeterMouvementDuration = 5000;
         private readonly IEngineFactory _engineFactory;
 
-        public AdvanceMouvement(IEngineFactory engineFactory)
+        public AdvanceMovement(IEngineFactory engineFactory)
         {
             _engineFactory = engineFactory;
         }
