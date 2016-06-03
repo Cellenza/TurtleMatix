@@ -19,7 +19,10 @@ namespace TurtleMatix.Turtle.Application.Generic
             {
                 case TurtleOperator.Advance:
                     return new AdvanceMovement(_engineFactory);
-                
+
+                case TurtleOperator.Back:
+                    return new GoBackwardMovement(_engineFactory);
+
                 case TurtleOperator.TurnLeft:
                     return new TurnLeftMovement(_engineFactory);
 
@@ -31,6 +34,7 @@ namespace TurtleMatix.Turtle.Application.Generic
 
                 case TurtleOperator.PenUp:
                     return new PenUpMovement(_engineFactory);
+
 
                 case TurtleOperator.Wait:
                     return new WaitMovement();

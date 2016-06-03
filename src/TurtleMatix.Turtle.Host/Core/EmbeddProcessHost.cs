@@ -32,14 +32,17 @@ namespace TurtleMatix.Turtle.Host.Core
             ExecuteCommand(e.Algorithm.Commands);
         }
 
-        private void ExecuteCommand(IEnumerable<TurtleCommand> commands)
+        private void ExecuteCommand(IEnumerable<TurtleCommand> commands, int round = 1)
         {
-            foreach (var command in commands)
+            for (int i = 0; i < round; i++)
             {
-                if (command.Childrens.Any()) ExecuteCommand(command.Childrens);
+                foreach (var command in commands)
+                {
+                    if (command.Childrens != null) ExecuteCommand(command.Childrens, command.Operand);
 
-                var mouvement = _movementFactory.GetMovement(command.Operator);
-                mouvement.Execute(command.Operand);
+                    var mouvement = _movementFactory.GetMovement(command.Operator);
+                    mouvement.Execute(command.Operand);
+                }
             }
         }
     }
