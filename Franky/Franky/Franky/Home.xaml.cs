@@ -10,6 +10,10 @@ namespace Franky
 {
     using System.Diagnostics;
 
+    using Microsoft.Azure.Devices.Client;
+
+    using Newtonsoft.Json;
+
     public partial class Home : ContentPage
     {
         public Home()
@@ -26,9 +30,16 @@ namespace Franky
             this.MenuBottom.TranslationY = this.Height - 59;
         }
 
-        private void RunClick(object sender, EventArgs e)
+        private async void RunClick(object sender, EventArgs e)
         {
             var instructions = this.DropInstructions.GetInstructions();
+
+            DeviceClient deviceClient = DeviceClient.CreateFromConnectionString("<replace>", TransportType.Http1);
+
+            var text = JsonConvert.SerializeObject(instructions);
+            var msg = new Message(Encoding.UTF8.GetBytes(text));
+
+            await deviceClient.SendEventAsync(msg);
 
             DispayDebugInstructions(instructions, 0);
         }
