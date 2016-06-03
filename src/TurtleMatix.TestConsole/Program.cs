@@ -1,6 +1,7 @@
 ﻿using System;
 using PubNubMessaging.Core;
 using TurtleMatix.Communication;
+using TurtleMatix.Core;
 
 namespace TurtleMatix.TestConsole
 {
@@ -32,7 +33,7 @@ namespace TurtleMatix.TestConsole
                 {
                     queue.Publish(
                         PubNubParams.PubNubChannel,
-                        key, 
+                        ParseAlgorithme(key).ToString(), 
                         GetResult, 
                         WhenErrorHandeled);
 
@@ -50,6 +51,23 @@ namespace TurtleMatix.TestConsole
         private static void WhenErrorHandeled(PubnubClientError error)
         {
 
+        }
+
+        private static TurtleAlgorithm ParseAlgorithme(string input)
+        {
+            var algorithm = new TurtleAlgorithm();
+            var parts = input.Split(new[] {";"}, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var command in parts)
+            {
+                var ops = command.Split(new[] {"-"}, StringSplitOptions.RemoveEmptyEntries);
+                algorithm.AddCommand(new TurtleCommand(ParseOperator(ops[0]), int.Parse(ops[1])));
+            }
+            return algorithm;
+        }
+
+        private static TurtleOperator ParseOperator(string input)
+        {
+            return (TurtleOperator) Enum.Parse(typeof (TurtleOperator), input);
         }
 
     }
