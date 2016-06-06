@@ -13,25 +13,25 @@
     <AbsoluteLayout WidthRequest="350" BackgroundColor="White" HeightRequest="700" TranslationY="0" x:Name="MenuBackground" />
 
     <!-- Top menu -->
-    <AbsoluteLayout WidthRequest="350" HeightRequest="60">
+    <AbsoluteLayout WidthRequest="350" HeightRequest="80">
       <Image Source="Franky_Logo_60.png" />
-      <Button Image="RunButton.png" TranslationX="60" BackgroundColor="White" BorderColor="Transparent" HeightRequest="60" WidthRequest="60" Clicked="RunClick" />
-      <Button Image="CleanButton.png" TranslationX="120" BackgroundColor="White" BorderColor="Transparent" HeightRequest="60" WidthRequest="60" Clicked="CleanClick" />
+      <Button Image="RunButton.png" TranslationX="60" BackgroundColor="White" BorderColor="Transparent" HeightRequest="80" WidthRequest="80" Clicked="RunClick" />
+      <Button Image="CleanButton.png" TranslationX="140" BackgroundColor="White" BorderColor="Transparent" HeightRequest="80" WidthRequest="80" Clicked="CleanClick" />
     </AbsoluteLayout>
 
     <!-- Bottom menu -->
     <Image Source="CellenzaLogo.png" x:Name="MenuBottom" />
 
     <!-- Instructions on left menu -->
-    <franky:InstructionButton BackgroundColor="#9ecf95" TranslationX="10" Text="Avancer" Value="1" Instruction="Advance" TranslationY="70" />
-    <franky:InstructionButton BackgroundColor="#eca78c" TranslationX="10" Text="Tourner a droite" Value="2" Instruction="TurnRight" TranslationY="130" />
-    <franky:InstructionButton BackgroundColor="#eca78c" TranslationX="10" Text="Tourner a gauche" Value="2" Instruction="TurnLeft" TranslationY="190" />
-    <franky:InstructionButton BackgroundColor="#aee2f6" TranslationX="10" Text="Reculer" Value="1" Instruction="Back" TranslationY="250" />
-    <franky:InstructionButton BackgroundColor="#f7e181" TranslationX="10" Text="Répéter 2 fois" Value="2" Instruction="ForEach" TranslationY="310" />
-    <franky:InstructionButton BackgroundColor="#f7e181" TranslationX="10" Text="Répéter 4 fois" Value="4" Instruction="ForEach" TranslationY="370" />
+    <franky:InstructionButton BackgroundColor="#9ecf95" TranslationX="10" Text="Avancer" Value="1" Instruction="Advance" TranslationY="90" />
+    <franky:InstructionButton BackgroundColor="#eca78c" TranslationX="10" Text="Tourner a droite" Value="2" Instruction="TurnRight" TranslationY="150" />
+    <franky:InstructionButton BackgroundColor="#eca78c" TranslationX="10" Text="Tourner a gauche" Value="2" Instruction="TurnLeft" TranslationY="210" />
+    <franky:InstructionButton BackgroundColor="#aee2f6" TranslationX="10" Text="Reculer" Value="1" Instruction="Back" TranslationY="270" />
+    <franky:InstructionButton BackgroundColor="#f7e181" TranslationX="10" Text="Répéter 2 fois" Value="2" Instruction="ForEach" TranslationY="330" />
+    <franky:InstructionButton BackgroundColor="#f7e181" TranslationX="10" Text="Répéter 4 fois" Value="4" Instruction="ForEach" TranslationY="390" />
+    <franky:InstructionButton BackgroundColor="#aee2f6" TranslationX="10" Text="Attendre" Value="1" Instruction="Wait" TranslationY="450" />
 
     <!-- Fake instruction when drag instruction to the drop location -->
     <franky:FakeInstructionButton />
   </franky:ZoneInstructions>
-
 </ContentPage>
