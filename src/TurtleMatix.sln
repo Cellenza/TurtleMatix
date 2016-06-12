@@ -1,23 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurtleMatix.Turtle.Application", "TurtleMatix.Turtle.Application\TurtleMatix.Turtle.Application.csproj", "{91EE06CF-E9B0-4A37-9A6B-C365244D1992}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Turtle", "Turtle", "{2189CE8C-4DCF-42FD-841A-AD294B8371CD}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ide", "Ide", "{ADDBBC18-8A98-4B23-B5C7-F1A75E619477}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurtleMatix.Turtle.Host", "TurtleMatix.Turtle.Host\TurtleMatix.Turtle.Host.csproj", "{D8238C86-63ED-4F73-BF69-B3548E63C561}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Communication", "Communication", "{8EC0779E-C41A-41C1-B042-159278AF7354}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurtleMatix.Communication", "TurtleMatix.Communication\TurtleMatix.Communication.csproj", "{BCBE1439-1FE9-453D-B4C6-F099A80CA4B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurtleMatix.TestConsole", "TurtleMatix.TestConsole\TurtleMatix.TestConsole.csproj", "{EA4DADE9-8EA4-48F3-97F1-24A57ABCDB70}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{0AC97289-FBF2-4633-8A11-81C692D3C4D2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurtleMatix.Core", "TurtleMatix.Core\TurtleMatix.Core.csproj", "{C0C04258-0808-4C87-8DCE-B1661C7E5021}"
 EndProject

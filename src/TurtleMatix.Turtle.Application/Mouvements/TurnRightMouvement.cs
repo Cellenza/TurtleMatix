@@ -16,8 +16,8 @@ namespace TurtleMatix.Turtle.Application.Mouvements
         {
             var leftEngine = _engineFactory.GetLeftEngine();
             var rightEngine = _engineFactory.GetRightEngine();
-            leftEngine.RightToLeft();
-            rightEngine.LeftToRight();
+            leftEngine.LeftToRight();
+            rightEngine.RightToLeft();
             Task.Delay(CalculateExecutionTime(value)).Wait();
             leftEngine.Stop();
             rightEngine.Stop();
